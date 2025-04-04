@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+  overflow: hidden;
+  border-radius: 10rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  border-radius: 10rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a:hover {
+  background-color: #6b6b6b;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(107,107,107);
+  z-index: -1;
+  border-radius: 10rem;
+  transition: 0.3s ease all;
+  transform: scale(0, 1);
+  transform-origin: bottom left;
+  transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navbar a:hover::after {
+  transform: scale(1, 1);
+}
+
+.navbar li {
+  float: left;
+}
+
+main h1{
+  margin-left: 20px;
+  margin-righ: 20px;
+  text-align: center;
+  color:white;
+  font-family: Cinzel, serif;
+}
+
+main h3{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align: center;
+    color:blue;
+    font-family: EB Garamond, serif;
+}
+
+main h2{
+    margin-left: 20px;
+    margin-right: 20px;
+    text-align:center;
+    color:white;
+    font-family: Cinzel, serif;
+}
+
+body {
+  background-image: url('https://media-hosting.imagekit.io/8b57030c348145da/att.T5UyRhjisgwUs9RRwm3GPV4OApmaY1SppZt0QeERvR0.jpeg?Expires=1838332932&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WxhGqmoXv7b9zITHK-7uK3UFXv8J45oUm3bXs9W3HYjtwWZL96dnkGi42rt2eENfRd9DS7qdZMP0Iqbw09DtVkfdgFl7rVqI8FGGle0vi3ANynNxGpD~0hjdrFyOICOk3BxLp~pi4yatGR5iCa~OUr7q9zuLUCZHYBMTgSGy8Shzkk8czSB2qtX5gvhfX31FLS-HcTkpZ1KPZEA5INiuMvPfRcyAUPbNHmG40hqhaFvO5QdegA-46XVp0iR7tnNf96yPfHwlrwiSDJT~HulT69KBBSulKxIs-E9SGBC1bfmzqThYexzG8W-m7PLQ0GMxjNh7xEA96xsUBMxF9FavYA__');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: Playfair;
+  display: serif;
+  text-align: center;
+}
+
+.topic {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #191919;
+}
+
+</style>
+</head>
+<body bgcolor="#BBCE95">
+
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="example.html">Example</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1> CSS LINK</h1>
+  <pre><h3> Styling Webpage Links
+  
+  A CSS link refers to the use of CSS (Cascading Style Sheets) to style the appearance of hyperlinks on a webpage. 
+  CSS provides various properties and pseudo-classes that allow you to customize the look of links in different states, such as when they are unvisited, visited, hovered over, or clicked.
+  
+  CSS Link States
+  
+  Links can exist in four distinct states:
+  
+  -  a:link : Styles the link when it has not been visited by the user.
+  
+  -  a:visited : Styles the link after it has been visited at least once.
+  
+  -  a:hover : Styles the link when the mouse pointer hovers over it.
+  
+  -  a:active : Styles the link at the moment it is being clicked.
+  
+  Styling Links with CSS
+  
+  You can use various CSS properties to style links, including:
+  
+  -  color : Sets the text color of the link.
+  
+  -  text-decoration : Adds or removes underlines, lines through, or other decorations from the link text.
+  
+  -  background-color : Sets the background color of the link.
+  
+  -  font-family : Changes the font style of the link text.
+  
+  Importance of CSS Links
+  
+  Styling links with CSS is essential for:
+  
+  - Visual Appeal:  Creating a visually appealing and consistent look for your website.
+  
+  - User Experience:  Making it easy for users to navigate and interact with your website.
+  
+  - Accessibility:  Ensuring that links are easily identifiable and accessible to all users.
+  
+  - Branding:  Maintaining a consistent brand identity throughout your website.</pre></h3>
+  <h1> PSEUDO CLASS</h1>
+  <pre><h3>CSS Pseudo-classes: Styling Elements Based on State
+  
+  A CSS pseudo-class is a keyword added to a selector that allows you to style an HTML element based on its state or condition, rather than its name or class.  It doesn't select elements based on their content in the document tree, but on external factors like user interaction or the element's status.
+  Think of it as adding a temporary class to an element based on its current state.
+  
+  How Pseudo-classes Work
+  
+  Pseudo-classes are denoted by a colon ( : ) followed by the pseudo-class name (e.g.,  :hover ,  :visited ,  :focus ).  They are added to selectors to target specific states.
+  For example,  a:hover  styles a link only when the mouse cursor hovers over it. This allows for dynamic styling that changes based on user interaction or the element's condition.</pre></h3>
+  
+  <h2>Examples of Pseudo-classes</h2>
+  
+  <pre><h3>There are numerous pseudo-classes, categorized by their function:
+  
+  - User Action Pseudo-classes: These respond to user interaction.  Common examples include:
+  
+  
+  -  :hover : Styles an element when the mouse hovers over it.
+  
+  -  :active : Styles an element while it's being clicked.
+  
+  -  :focus : Styles an element when it has keyboard focus.
+  
+  - Link Pseudo-classes: These target links based on their state:
+  
+  
+  -  :link : Styles unvisited links.
+  
+  -  :visited : Styles visited links.
+  
+  - Input Pseudo-classes:  These target form elements based on their state:
+  
+  
+  -  :checked : Styles a checkbox or radio button when checked.
+  
+  -  :valid  and  :invalid : Styles form elements based on input validity.
+  
+  - Structural Pseudo-classes: These target elements based on their position in the document tree:
+  
+  
+  -  :first-child : Styles the first child element of its parent.
+  
+  -  :last-child : Styles the last child element of its parent.
+  
+  Distinguishing Pseudo-classes from Pseudo-elements
+  
+  It's important to note the difference between pseudo-classes and pseudo-elements.  Pseudo-elements (using  : ) style parts of an element, while pseudo-classes style the entire element based on its state.  For example,  ::first-line  styles only the first line of text within an element, while  :first-child  styles the entire element if it's the first child.
+  
+  In essence, pseudo-classes are a powerful tool in CSS for creating dynamic and interactive styles based on an element's condition, enhancing user experience and website interactivity.</h3></pre>
+  
+  <h1> NAVIGATION BAR</h1>
+  <pre><h3>Navigation Bar: A Guide to Website and Application Navigation
+  
+  A navigation bar, also known as a navbar, is a crucial element in the user interface (UI) of websites and applications.  Its primary function is to help users easily access different sections or features within the platform.  Think of it as a roadmap for navigating the digital space.
+  
+  Types and Locations of Navigation Bars
+  
+  Navigation bars come in various forms and can be positioned in different areas of a webpage or app.  Common types include:
+  
+  - Horizontal Navigation Bars:  These are the most common, typically located at the top of a page, displaying links in a horizontal row.  They are easy to scan and use.
+  
+  - Vertical Navigation Bars: Often found on the sides of a page (sidebars), these are useful for websites with extensive content or many categories.
+  
+  - Dropdown Navigation Bars: These feature menus that expand when clicked, revealing additional sub-menus or options. This is ideal for organizing a large number of links.
+  
+  - Fixed Navigation Bars: These remain visible even when scrolling down the page, providing consistent access to key links.
+  
+  Functionality and Importance
+  
+  The navigation bar's main function is to guide users through a website or application. It usually contains links to important sections like the home page, about us, contact, blog, or product categories.  A well-designed navigation bar is intuitive and easy to use, enhancing the user.</h3>
+  
+  <h2>Examples in Different Contexts</h2>
+  
+  <h3>Navigation bars are ubiquitous across various platforms:
+  
+  - Websites:  Most websites use navigation bars to organize their content and make it easy for visitors to find what they need.
+  
+  - Mobile Apps:  Mobile apps use navigation bars, often at the bottom of the screen, to switch between different sections or screens within the app.
+  
+  - File Browsers:  File browsers use navigation bars to help users navigate their file system.
+  
+  Design Considerations
+  
+  Effective navigation bar design is crucial for user experience.  Key considerations include:
+  
+  - Clarity:  Links should be clearly labeled and easy to understand.
+  
+  - Consistency:  Maintain a consistent design and placement across all pages.
+  
+  - Accessibility:  Ensure the navigation bar is accessible to users with disabilities.</h3></pre>
+</main>
+
+</body>
+</html>

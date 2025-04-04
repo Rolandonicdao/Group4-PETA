@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap');
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color:black;
+  overflow: hidden;
+  border-radius: 10rem;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  border-radius: 10rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  position: relative;
+  z-index: 1;
+}
+
+.navbar a:hover {
+  background-color: #6b6b6b;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgb(107,107,107);
+  z-index: -1;
+  border-radius: 10rem;
+  transition: 0.3s ease all;
+  transform: scale(0, 1);
+  transform-origin: bottom left;
+  transition: transform 500ms cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.navbar a:hover::after {
+  transform: scale(1, 1);
+}
+
+.navbar li {
+  float: left;
+}
+
+main {
+  margin: 20px;
+  text-align: center;
+}
+
+body {
+  background-image: url('https://media-hosting.imagekit.io/8b57030c348145da/att.T5UyRhjisgwUs9RRwm3GPV4OApmaY1SppZt0QeERvR0.jpeg?Expires=1838332932&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=WxhGqmoXv7b9zITHK-7uK3UFXv8J45oUm3bXs9W3HYjtwWZL96dnkGi42rt2eENfRd9DS7qdZMP0Iqbw09DtVkfdgFl7rVqI8FGGle0vi3ANynNxGpD~0hjdrFyOICOk3BxLp~pi4yatGR5iCa~OUr7q9zuLUCZHYBMTgSGy8Shzkk8czSB2qtX5gvhfX31FLS-HcTkpZ1KPZEA5INiuMvPfRcyAUPbNHmG40hqhaFvO5QdegA-46XVp0iR7tnNf96yPfHwlrwiSDJT~HulT69KBBSulKxIs-E9SGBC1bfmzqThYexzG8W-m7PLQ0GMxjNh7xEA96xsUBMxF9FavYA__');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.topic {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-align: center;
+  color: #191919;
+}
+
+</style>
+</head>
+<body bgcolor="#BBCE95">
+
+<nav class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="example.html">Example</a></li>
+  </ul>
+</nav>
+
+<main>
+  <h1 class="topic">The Three Topics We Chose Are:</h1>
+  <p class="topic">CSS Link</p>
+  <p class="topic">Pseudo Class</p>
+  <p class="topic">Navigation Bar</p>
+</main>
+
+</body>
+</html>
